@@ -18,8 +18,8 @@ function App() {
         
       <Router basename="">
         <div>
+        <Navbar />
           <Header />
-          <Navbar />
           {/* Wrap Route elements in a Routes component */}
           <Routes>
             {/* Define routes using the Route component to render different page components at different paths */}
