@@ -1,14 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 
 function Navbar() {
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
-        <a className="navbar-logo" href="#">
-          <img src = "../logo.jpeg" width = "20%" height = "20%"></img>
-          
-        </a>
+        <NavLink className="navbar-logo" to="/">
+          <img src = "../logo.jpeg" width = "20%" height = "20%" alt="logo"></img>
+        </NavLink>
         <button
           className="navbar-toggler"
           data-toggle="collapse"
@@ -19,26 +19,24 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon" />
         </button>
-
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/">
                 Home <span className="sr-only"></span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/bmi">
                 BMI Calculator
-              </a>
+              </NavLink>
             </li>
-           
           </ul>
-      
         </div>
       </nav>
     </div>
   );
 }
+
 
 export default Navbar;
