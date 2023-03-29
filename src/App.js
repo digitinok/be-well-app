@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+// add bootstrap css 
+import 'bootstrap/dist/css/bootstrap.css'
+
+import Bmi from "./pages/Bmi";
+import Home from "./pages/Home";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        
+      <Router basename="">
+        <div>
+          <Header />
+          <Navbar />
+          {/* Wrap Route elements in a Routes component */}
+          <Routes>
+            {/* Define routes using the Route component to render different page components at different paths */}
+            {/* Define a default route that will render the Home component */}
+            <Route path="/" element={<Home />} />
+            <Route path="/bmi" element={<Bmi />} />
+            {/*<Route path="/library" element={<Library />} />*/}
+            {/* 404 page for incorrect link
+            <Route path="*" element={<NoPage />} />  */}
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
     </div>
-  );
+    );
 }
 
 export default App;
