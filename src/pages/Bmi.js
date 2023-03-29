@@ -1,5 +1,5 @@
 import React from "react";
-
+/*
 let calcBMI =(weight, height) => {
   // prevent submitting event. prevent Default{}
     if (weight===0 || height===0) {
@@ -11,7 +11,7 @@ let calcBMI =(weight, height) => {
     
   }
 }
-
+*/
 
 export default function Bmi() {
   return (
