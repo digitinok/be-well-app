@@ -1,4 +1,5 @@
 import React from "react";
+import BmiForm from "../components/BmiForm";
 /*
 let calcBMI =(weight, height) => {
   // prevent submitting event. prevent Default{}
@@ -17,11 +18,8 @@ export default function Bmi() {
   return (
     <div>
       <h1>BMI Calculator</h1>
-      <p>Height (in cm)</p>
-      <input type="text" placeholder="Height in cm"/>
-      <p>Weight (in Kg)</p>
-      <input type="text" placeholder="Weight in kg"/>
       <p></p>
+      <BmiForm />
     </div>
   )
 }
