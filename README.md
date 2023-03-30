@@ -46,8 +46,8 @@ https://taupe-banoffee-2dd97f.netlify.app
 ## Usage
 
 Run the development server with `npm start`. Open http://localhost:3000 with your browser to see the result.
-You can start editing the page by modifying pages/index.js. The page auto-updates as you edit the file.\
-The page will reload when you make changes.
+You can start editing the page by modifying `src/App.js` or create new pages uner `src/pages` or components under `src/components`. The page auto-updates as you edit the file(s).\
+
 
 ## License
 
