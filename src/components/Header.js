@@ -10,7 +10,7 @@ import React from "react";
                 <p>Well</p>
                     
             </h1>
-            </header>
+        </header>
     )
 }
 
