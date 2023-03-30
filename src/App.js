@@ -7,9 +7,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Bmi from "./pages/Bmi";
 import Home from "./pages/Home";
 
+import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -18,8 +18,9 @@ function App() {
         
       <Router basename="">
         <div>
+          <body>
         <Navbar />
-          <Header />
+        <Header />
           {/* Wrap Route elements in a Routes component */}
           <Routes>
             {/* Define routes using the Route component to render different page components at different paths */}
@@ -30,10 +31,12 @@ function App() {
             {/* 404 page for incorrect link
             <Route path="*" element={<NoPage />} />  */}
           </Routes>
+          </body>
           <Footer />
         </div>
       </Router>
     </div>
+  
     );
 }
 
