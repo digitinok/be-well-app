@@ -18,54 +18,57 @@ for (let y in heights) {
 // console.log(heights, weights, bmiValues, bmiValues[50,0]);
 
 return (
-  <Plot
-    data={[
-      {
-        name: 'you',
-        type: 'scatter',
-        mode: 'points',
-        x: [w],
-        y: [h],
-        marker: {color: 'black'}
-      },
-      {
-        type: 'heatmap',
-        z: bmiValues,
-        x: weights,
-        y: heights,
-        hoverongaps: false,
-        colorscale: [
-          ['0.0', 'rgb(0,0,149)'],
-          ['0.206', 'rgb(0,0,180)'],
-          ['0.208', 'rgb(0,255,0)'],
-          ['0.363', 'rgb(0,255,0)'],
-          ['0.366', 'rgb(255,200,0)'],
-          ['0.485', 'rgb(255,200,0)'],
-          ['0.487', 'rgb(255,0,0)'],
-          ['0.607', 'rgb(255,0,0)'],
-          ['0.61', 'rgb(255,0,255)'],
-          ['1.0', 'rgb(255,0,255)']
-        ],
-        showscale: true,
-      }
-    ]}
+<Plot
+  data={[
+    {
+      name: 'you',
+      type: 'scatter',
+      mode: 'points',
+      x: [w],
+      y: [h],
+      marker: {color: 'black'}
+    },
+    {
+      type: 'heatmap',
+      z: bmiValues,
+      x: weights,
+      y: heights,
+      hoverongaps: false,
+      colorscale: [
+        ['0.0', 'rgb(0,0,149)'],
+        ['0.206', 'rgb(0,0,180)'],
+        ['0.208', 'rgb(0,255,0)'],
+        ['0.363', 'rgb(0,255,0)'],
+        ['0.366', 'rgb(255,200,0)'],
+        ['0.485', 'rgb(255,200,0)'],
+        ['0.487', 'rgb(255,0,0)'],
+        ['0.607', 'rgb(255,0,0)'],
+        ['0.61', 'rgb(255,0,255)'],
+        ['1.0', 'rgb(255,0,255)']
+      ],
+      showscale: true,
+    }
+  ]}
 
-    layout={{
-      xaxis: {
-        title: 'Weight [kg]',
-      },
-      yaxis: {
-        title: 'Height [cm]',
-      },
-      font: {
-        family: 'Arial',
-        size: 12,
-        color: 'rgb(150,150,150)'
-      },
-      width: 960,
-      height: 720,
-      title: 'Body-Mass-Index Chart',
-    }}
-  />
+  layout={{
+    xaxis: {
+      title: 'Weight [kg]',
+    },
+    yaxis: {
+      title: 'Height [cm]',
+    },
+    font: {
+      family: 'Arial',
+      size: 12,
+      color: 'rgb(255,255,255)'
+    },
+    width: 960,
+    height: 720,
+    title: 'Body-Mass-Index Chart',
+    //colorscale: {['one','two']},
+    paper_bgcolor: 'rgba(0,0,0,0)'
+
+  }}
+/>
 )
 }
