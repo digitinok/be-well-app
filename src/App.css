@@ -3,7 +3,7 @@
 }
 
 * {
-  background-color: rgb(105, 167, 143);
+ 
   color: white;
 }
 
@@ -12,3 +12,14 @@ input {
   color: black;
 }
 
+.navbar-container{
+  background-color: #545151;
+}
+
+.main-text{
+ text-align: right;
+ padding-right: 25%;
+ padding-top: 10%;
+ font-family:monospace;
+ color:#efe6e6;
+}

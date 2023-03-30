@@ -1,13 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "../App.css"
 
 
 function Navbar() {
   return (
-    <div className="container">
+    <div className="navbar-container">
       <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
         <NavLink className="navbar-logo" to="/">
-          <img src = "../logo.jpeg" width = "20%" height = "20%" alt="logo"></img>
+          <img src = "../logo.png" width = "20%" height = "20%" alt="logo"></img>
         </NavLink>
         <button
           className="navbar-toggler"
