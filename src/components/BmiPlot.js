@@ -1,7 +1,13 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
 
-export default function BmiPlot({w,h}) {
+export default function BmiPlot({w=40,h=140}) {
+  //limit weight  and hight to range of plot
+  if (w<40){w=40;}
+  if (h<140){h=140;}
+  if (w>100){w=100;}
+  if (h>200){h=200;}
+
   const heights = Array(61).fill().map((_,i) => ((i)+140));
   const weights = Array(61).fill().map((_,i) => ((i)+40));
 
@@ -66,7 +72,8 @@ return (
     height: 720,
     title: 'Body-Mass-Index Chart',
     //colorscale: {['one','two']},
-    paper_bgcolor: 'rgba(0,0,0,0)'
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
 
   }}
 />
