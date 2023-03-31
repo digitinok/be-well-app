@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import Bmi from "./pages/Bmi";
 import Home from "./pages/Home";
-
+//import Library from "./pages/Library";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -17,20 +17,18 @@ function App() {
         
       <Router basename="">
         <div>
-          <body>
-        <Navbar />
-          {/* Wrap Route elements in a Routes component */}
-          <Routes>
-            {/* Define routes using the Route component to render different page components at different paths */}
-            {/* Define a default route that will render the Home component */}
-            <Route path="/" element={<Home />} />
-            <Route path="/bmi" element={<Bmi />} />
-            {/*<Route path="/library" element={<Library />} />*/}
-            {/* 404 page for incorrect link
-            <Route path="*" element={<NoPage />} />  */}
-          </Routes>
-          </body>
-          <Footer />
+          <Navbar />
+            {/* Wrap Route elements in a Routes component */}
+            <Routes>
+              {/* Define routes using the Route component to render different page components at different paths */}
+              {/* Define a default route that will render the Home component */}
+              <Route path="/" element={<Home />} />
+              <Route path="/bmi" element={<Bmi />} />
+              {/*<Route path="/library" element={<Library />} />  */}
+              {/* 404 page for incorrect link
+              <Route path="*" element={<NoPage />} />  */}
+            </Routes>
+            <Footer />
         </div>
       </Router>
     </div>

@@ -21,8 +21,6 @@ for (let y in heights) {
   bmiValues.push(temp);
 }
 
-// console.log(heights, weights, bmiValues, bmiValues[50,0]);
-
 return (
 <Plot
   data={[
