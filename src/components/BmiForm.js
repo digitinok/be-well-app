@@ -6,8 +6,8 @@ const calcBMI = (weight, height) => {
 }
 
 export default function BmiForm() {
-    const [height, setHeight] = useState('140');
-    const [weight, setWeight] = useState('40');
+    const [height, setHeight] = useState('0');
+    const [weight, setWeight] = useState('0');
     const [bmi, setBmi] = useState('0');
 
     const handleSubmit = (e) => {
