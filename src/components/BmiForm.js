@@ -6,12 +6,16 @@ const calcBMI = (weight, height) => {
 }
 
 export default function BmiForm() {
-    const [height, setHeight] = useState('0');
-    const [weight, setWeight] = useState('0');
+    const [height, setHeight] = useState('140');
+    const [weight, setWeight] = useState('40');
+    const [bmi, setBmi] = useState('0');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert([height, weight]);
+        if (height !== '' && weight !== '' && parseInt(height) > 0 && parseInt(weight) > 0) {
+            setBmi(calcBMI(parseInt(weight), parseInt(height)));
+        }
+        
     }
 
     return (
@@ -43,8 +47,19 @@ export default function BmiForm() {
                 <br />  
             </form>
             <hr />
-            {height !== '' && weight !== '' && parseInt(height) > 0 && parseInt(weight) > 0 &&
-                <p>Your BMI is {calcBMI(parseInt(weight), parseInt(height))}.</p>
+            {bmi > 0 &&
+                <h4><strong>Your BMI is {bmi} ...  
+                    {(bmi < 18.5) ? 
+                        " underweight" : 
+                        (bmi < 25) ? 
+                            " normal" : 
+                            (bmi < 30) ? 
+                                " overweight" : 
+                                (bmi < 35) ? 
+                                    " obese" : 
+                                    " extremely obese"
+                    }
+                </strong></h4>
             }
             <BmiPlot w={weight} h={height}/>
         </div>
